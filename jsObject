@@ -1,0 +1,24 @@
+const res={};
+function g(files){
+    const owners={};
+    
+    for(key in files){
+const owner=files[key]; //key =input, value=randy
+if(!owners[owner]){
+    owners[owner]=[];
+}
+owners[owner].push(key);
+    }
+    return owners;
+}
+
+const files={
+    'input.txt':"Randy",
+    'Code.py':'Stan',
+    'Output.txt':'Randy'
+};
+const owners=g(files);
+console.log(res);
+console.log(owners);
+
+//output: {'Randy':['Input.txt','Output.txt'],'Stan':['Code.py']}
